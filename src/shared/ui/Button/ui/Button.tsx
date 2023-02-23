@@ -1,6 +1,6 @@
-import {classNames} from "shared/lib/classNames/classNames";
-import cls from './Button.module.scss'
-import {ButtonHTMLAttributes, FC} from "react";
+import { classNames } from 'shared/lib/classNames/classNames';
+import { ButtonHTMLAttributes, FC } from 'react';
+import cls from './Button.module.scss';
 
 export type ButtonVariant = 'clear'
 
@@ -15,14 +15,15 @@ export const Button: FC<ButtonProps> = (props) => {
         children,
         variant = 'clear',
         ...otherProps
-    } = props
+    } = props;
 
     return (
         <button
+            type="button"
             className={classNames(cls.Button, {}, [className, cls[variant]])}
             {...otherProps}
-        >{children}
+        >
+            {children}
         </button>
     );
 };
-

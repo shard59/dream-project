@@ -1,9 +1,9 @@
-import {createContext} from "react";
+import { createContext } from 'react';
 
 export const THEME = {
     LIGHT: 'light',
-    DARK: 'dark'
-} as const
+    DARK: 'dark',
+} as const;
 
 type ValueOf<T> = T[keyof T]
 export type Theme = ValueOf<typeof THEME>
@@ -13,6 +13,6 @@ export interface THemeContextProps {
     setTheme?: (theme: Theme) => void
 }
 
-export const ThemeContext = createContext<THemeContextProps>({})
+export const ThemeContext = createContext<THemeContextProps>({});
 
-export const LOCAL_STORAGE_THEME_KEY = 'theme'
+export const LOCAL_STORAGE_THEME_KEY = 'theme';

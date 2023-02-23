@@ -6,9 +6,9 @@ export function classNames(mainClass: string, mods: Mods = {}, additional: strin
         ...additional.filter(Boolean),
         ...Object.entries(mods).reduce((cls, [className, val]) => {
             if (val) {
-                cls.push(className)
+                cls.push(className);
             }
-            return cls
-        }, [])
-    ].join(" ")
+            return cls;
+        }, []),
+    ].join(' ');
 }
