@@ -1,6 +1,6 @@
 import type { Configuration } from 'webpack';
 
-export type BuildMode = Configuration['mode']
+type BuildMode = Configuration['mode']
 
 export interface BuildPaths {
     entry: string

@@ -3,7 +3,7 @@ import { Link, LinkProps } from 'react-router-dom';
 import { FC } from 'react';
 import cls from './AppLink.module.scss';
 
-export type AppLinkVariant = 'primary' | 'secondary'
+type AppLinkVariant = 'primary' | 'secondary'
 
 interface AppLinkProps extends LinkProps{
     className?: string;
