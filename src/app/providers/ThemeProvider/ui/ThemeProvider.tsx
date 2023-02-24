@@ -1,7 +1,7 @@
 import React, { FC, useMemo, useState } from 'react';
 import {
     LOCAL_STORAGE_THEME_KEY, Theme, THEME, ThemeContext, THemeContextProps,
-} from '../lib/theme/ThemeContext';
+} from '../helpers/theme/ThemeContext';
 
 const isTheme = (value: any): value is Theme => {
     const isString = typeof value === 'string';

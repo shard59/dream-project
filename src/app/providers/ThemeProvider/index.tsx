@@ -1,2 +1,2 @@
 export { ThemeProvider } from './ui/ThemeProvider';
-export { UseTheme } from './lib/theme/UseTheme';
+export { UseTheme } from './helpers/theme/UseTheme';
