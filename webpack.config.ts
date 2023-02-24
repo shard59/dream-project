@@ -1,6 +1,6 @@
 import { Configuration } from 'webpack';
 import path from 'path';
-import { buildWebpackConfig } from './config/build/buildWebpackConfig';
+import buildWebpackConfig from './config/build/buildWebpackConfig';
 import { BuildPaths, EnvOptions } from './config/build/types/config';
 
 export default ({ mode = 'development', port }: EnvOptions): Configuration => {

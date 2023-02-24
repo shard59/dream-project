@@ -14,7 +14,7 @@ const getDefaultTheme = (): Theme => {
     return isTheme(theme) ? theme : THEME.LIGHT;
 };
 
-export const ThemeProvider: FC = ({ children }) => {
+const ThemeProvider: FC = ({ children }) => {
     const [theme, setTheme] = useState<Theme>(getDefaultTheme());
 
     const defaultProps = useMemo<THemeContextProps>(() => ({
@@ -28,3 +28,5 @@ export const ThemeProvider: FC = ({ children }) => {
         </ThemeContext.Provider>
     );
 };
+
+export default ThemeProvider;

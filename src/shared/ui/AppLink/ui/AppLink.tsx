@@ -1,4 +1,4 @@
-import { classNames } from 'shared/helpers/classNames/classNames';
+import classNames from 'shared/helpers/classNames/classNames';
 import { Link, LinkProps } from 'react-router-dom';
 import { FC } from 'react';
 import cls from './AppLink.module.scss';
@@ -10,7 +10,7 @@ interface AppLinkProps extends LinkProps{
     variant?: AppLinkVariant
 }
 
-export const AppLink: FC<AppLinkProps> = (props) => {
+const AppLink: FC<AppLinkProps> = (props) => {
     const {
         children,
         className,
@@ -28,3 +28,5 @@ export const AppLink: FC<AppLinkProps> = (props) => {
         </Link>
     );
 };
+
+export default AppLink;

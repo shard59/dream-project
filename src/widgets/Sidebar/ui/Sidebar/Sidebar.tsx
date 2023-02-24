@@ -1,15 +1,15 @@
-import { classNames } from 'shared/helpers/classNames/classNames';
+import classNames from 'shared/helpers/classNames/classNames';
 import React, { useState } from 'react';
-import { ThemeSwitcher } from 'widgets/ThemeSwitcher';
-import { LanguageSwitcher } from 'widgets/LanguageSwitcher';
-import { Button } from 'shared/ui/Button';
+import ThemeSwitcher from 'widgets/ThemeSwitcher';
+import LanguageSwitcher from 'widgets/LanguageSwitcher';
+import Button from 'shared/ui/Button';
 import cls from './Sidebar.module.scss';
 
 interface SidebarProps {
     className?: string;
 }
 
-export const Sidebar = ({ className }: SidebarProps) => {
+const Sidebar = ({ className }: SidebarProps) => {
     const [collapsed, setCollapsed] = useState(false);
     const mods = {
         [cls.collapsed]: collapsed,
@@ -29,3 +29,5 @@ export const Sidebar = ({ className }: SidebarProps) => {
         </div>
     );
 };
+
+export default Sidebar;

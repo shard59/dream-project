@@ -1,4 +1,4 @@
-import { classNames } from 'shared/helpers/classNames/classNames';
+import classNames from 'shared/helpers/classNames/classNames';
 import { ButtonHTMLAttributes, FC } from 'react';
 import cls from './Button.module.scss';
 
@@ -9,7 +9,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     variant?: ButtonVariant;
 }
 
-export const Button: FC<ButtonProps> = (props) => {
+const Button: FC<ButtonProps> = (props) => {
     const {
         className,
         children,
@@ -27,3 +27,5 @@ export const Button: FC<ButtonProps> = (props) => {
         </button>
     );
 };
+
+export default Button;

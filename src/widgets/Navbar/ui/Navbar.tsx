@@ -1,15 +1,15 @@
 import React from 'react';
-import { classNames } from 'shared/helpers/classNames/classNames';
-import { AppLink } from 'shared/ui/AppLink';
+import classNames from 'shared/helpers/classNames/classNames';
+import AppLink from 'shared/ui/AppLink';
 import { useTranslation } from 'react-i18next';
-import { RoutePath } from 'shared/config/routePath/routePath';
+import RoutePath from 'shared/config/routePath/routePath';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
     className?: string;
 }
 
-export const Navbar = ({ className }: NavbarProps) => {
+const Navbar = ({ className }: NavbarProps) => {
     const { t } = useTranslation();
 
     return (
@@ -31,3 +31,5 @@ export const Navbar = ({ className }: NavbarProps) => {
         </div>
     );
 };
+
+export default Navbar;

@@ -1,10 +1,10 @@
 import { RouteProps } from 'react-router-dom';
-import { MainPage } from 'pages/MainPage';
-import { AboutPage } from 'pages/AboutPage';
-import { NotFoundPage } from 'pages/NotFoundPage';
-import { RoutePath } from 'shared/config/routePath/routePath';
+import MainPage from 'pages/MainPage';
+import AboutPage from 'pages/AboutPage';
+import NotFoundPage from 'pages/NotFoundPage';
+import RoutePath from 'shared/config/routePath/routePath';
 
-export const routePath: RouteProps[] = [
+const routePath: RouteProps[] = [
     {
         path: RoutePath.main,
         element: <MainPage />,
@@ -18,3 +18,5 @@ export const routePath: RouteProps[] = [
         element: <NotFoundPage />,
     },
 ];
+
+export default routePath;

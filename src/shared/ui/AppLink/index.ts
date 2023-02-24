@@ -1,1 +1,3 @@
-export { AppLink } from './ui/AppLink';
+import AppLink from './ui/AppLink';
+
+export default AppLink;
