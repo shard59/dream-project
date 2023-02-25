@@ -19,9 +19,13 @@ const Sidebar = ({ className }: SidebarProps) => {
 
     return (
         <div
+            data-testid="sidebar"
             className={classNames(cls.sidebar, mods, [className])}
         >
-            <Button onClick={toggle} />
+            <Button
+                data-testid="sidebar-toggle"
+                onClick={toggle}
+            />
             <div className={cls.switchers}>
                 <ThemeSwitcher />
                 <LanguageSwitcher className={cls.lang} />
