@@ -14,20 +14,7 @@ const Navbar = ({ className }: NavbarProps) => {
 
     return (
         <div className={classNames(cls.navbar, {}, [className])}>
-            <div className={cls.links}>
-                <AppLink
-                    to={RoutePath.main}
-                    variant="secondary"
-                >
-                    {t('Main')}
-                </AppLink>
-                <AppLink
-                    to={RoutePath.about}
-                    variant="secondary"
-                >
-                    {t('About')}
-                </AppLink>
-            </div>
+            <div className={cls.links} />
         </div>
     );
 };
