@@ -2,7 +2,13 @@ import classNames from 'shared/helpers/classNames/classNames';
 import { ButtonHTMLAttributes, FC } from 'react';
 import cls from './Button.module.scss';
 
-type ButtonVariant = 'default' | 'clear' | 'outline' | 'background' | 'backgroundInverted'
+type ButtonVariant =
+    'default' |
+    'clear' |
+    'clearInverted' |
+    'outline' |
+    'background' |
+    'backgroundInverted'
 type ButtonSize = 'size_m' | 'size_l' | 'size_xl'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{

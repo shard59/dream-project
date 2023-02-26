@@ -3,6 +3,10 @@ import {
     LOCAL_STORAGE_THEME_KEY, Theme, THEME, ThemeContext, THemeContextProps,
 } from '../helpers/theme/ThemeContext';
 
+interface ThemeProviderProps {
+    initialTheme?: Theme;
+}
+
 const isTheme = (value: any): value is Theme => {
     const isString = typeof value === 'string';
     const existTheme = Object.values(THEME).some((t) => t === value);
@@ -14,8 +18,13 @@ const getDefaultTheme = (): Theme => {
     return isTheme(theme) ? theme : THEME.LIGHT;
 };
 
-const ThemeProvider: FC = ({ children }) => {
-    const [theme, setTheme] = useState<Theme>(getDefaultTheme());
+const ThemeProvider: FC<ThemeProviderProps> = (props) => {
+    const {
+        children,
+        initialTheme,
+    } = props;
+
+    const [theme, setTheme] = useState<Theme>(initialTheme || getDefaultTheme());
 
     const defaultProps = useMemo<THemeContextProps>(() => ({
         theme,

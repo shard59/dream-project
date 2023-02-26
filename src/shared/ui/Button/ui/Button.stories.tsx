@@ -25,6 +25,12 @@ Clear.args = {
     variant: 'clear',
 };
 
+export const ClearInverted = Template.bind({});
+ClearInverted.args = {
+    children: 'Text',
+    variant: 'clearInverted',
+};
+
 export const Background = Template.bind({});
 Background.args = {
     children: 'Text',

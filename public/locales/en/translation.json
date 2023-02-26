@@ -5,5 +5,7 @@
   "Main": "Main",
   "About": "About",
   "Error message": "There is unexpected Error",
-  "Refresh page": "Refresh page"
+  "Refresh page": "Refresh page",
+  "Login": "Login",
+  "Logout": "Logout"
 }
