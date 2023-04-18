@@ -7,5 +7,7 @@
   "Error message": "There is unexpected Error",
   "Refresh page": "Refresh page",
   "Login": "Login",
-  "Logout": "Logout"
+  "Logout": "Logout",
+  "Enter login": "Login:",
+  "Enter password": "Password:"
 }

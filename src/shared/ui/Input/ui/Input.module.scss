@@ -1,0 +1,21 @@
+.inputWrapper {
+    display: flex;
+}
+
+.placeholder {
+    margin-right: 5px;
+}
+
+.input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-size: inherit;
+    font-family: inherit;
+    color: inherit;
+    flex-grow: 1;
+
+    &.focus {
+        outline: none;
+    }
+}

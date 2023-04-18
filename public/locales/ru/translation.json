@@ -7,5 +7,7 @@
   "Error message": "Произошла непредвиденная ошибка",
   "Refresh page": "Обновить страницу",
   "Login": "Войти",
-  "Logout": "Выйти"
+  "Logout": "Выйти",
+  "Enter login": "Логин:",
+  "Enter password": "Пароль:"
 }
