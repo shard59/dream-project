@@ -1,8 +1,8 @@
 import React, { FC, useMemo, useState } from 'react';
+import addTheme from 'app/providers/ThemeProvider/helpers/theme/AddTheme';
 import {
     LOCAL_STORAGE_THEME_KEY, THEME, Theme, ThemeContext, ThemeContextProps,
 } from '../helpers/theme/ThemeContext';
-import addTheme from "app/providers/ThemeProvider/helpers/theme/AddTheme";
 
 interface ThemeProviderProps {
     initialTheme?: Theme;
@@ -32,7 +32,7 @@ const ThemeProvider: FC<ThemeProviderProps> = (props) => {
         setTheme,
     }), [theme]);
 
-    addTheme(theme)
+    addTheme(theme);
 
     return (
         <ThemeContext.Provider value={defaultProps}>
