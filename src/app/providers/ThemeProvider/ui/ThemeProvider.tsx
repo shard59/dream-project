@@ -1,7 +1,8 @@
 import React, { FC, useMemo, useState } from 'react';
 import {
-    LOCAL_STORAGE_THEME_KEY, Theme, ThemeContext, ThemeContextProps,
+    LOCAL_STORAGE_THEME_KEY, THEME, Theme, ThemeContext, ThemeContextProps,
 } from '../helpers/theme/ThemeContext';
+import addTheme from "app/providers/ThemeProvider/helpers/theme/AddTheme";
 
 interface ThemeProviderProps {
     initialTheme?: Theme;
@@ -9,8 +10,8 @@ interface ThemeProviderProps {
 
 const isTheme = (value: any): value is Theme => {
     const isString = typeof value === 'string';
-    const themes: Theme[] = ['light', 'dark'];
-    return isString && themes.some((t) => t === value);
+    const existTheme = Object.values(THEME).some((t) => t === value);
+    return isString && existTheme;
 };
 
 const getDefaultTheme = (): Theme => {
@@ -30,6 +31,8 @@ const ThemeProvider: FC<ThemeProviderProps> = (props) => {
         theme,
         setTheme,
     }), [theme]);
+
+    addTheme(theme)
 
     return (
         <ThemeContext.Provider value={defaultProps}>
