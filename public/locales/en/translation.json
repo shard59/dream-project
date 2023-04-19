@@ -9,5 +9,7 @@
   "Login": "Login",
   "Logout": "Logout",
   "Enter login": "Login:",
-  "Enter password": "Password:"
+  "Enter password": "Password:",
+  "Auth form": "Authorization form",
+  "Incorrect password": "Incorrect login or password"
 }

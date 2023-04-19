@@ -1,13 +1,12 @@
-import webpack, { RuleSetRule } from 'webpack';
+import webpack, { RuleSetRule, DefinePlugin } from 'webpack';
 import path from 'path';
-import { BuildPaths } from '../build/types/config';
 import buildCssLoader from '../build/loaders/buildCssLoader';
 
 export default ({ config }: {config: webpack.Configuration}) => {
     const modifiedConfig = { ...config };
     const src = path.resolve(__dirname, '..', '..', 'src');
 
-    modifiedConfig.resolve.modules.push(src);
+    modifiedConfig.resolve.modules = [src, 'node_modules'];
     modifiedConfig.resolve.extensions.push('.ts', '.tsx');
 
     modifiedConfig.module.rules = modifiedConfig.module.rules.map((rule: RuleSetRule) => {
@@ -23,6 +22,10 @@ export default ({ config }: {config: webpack.Configuration}) => {
         use: ['@svgr/webpack'],
     });
     modifiedConfig.module.rules.push(buildCssLoader(true));
+
+    config.plugins.push(new DefinePlugin({
+        __IS_DEV__: true,
+    }));
 
     return modifiedConfig;
 };

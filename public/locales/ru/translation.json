@@ -9,5 +9,7 @@
   "Login": "Войти",
   "Logout": "Выйти",
   "Enter login": "Логин:",
-  "Enter password": "Пароль:"
+  "Enter password": "Пароль:",
+  "Auth form": "Форма авторизации",
+  "Incorrect password": "Неверный логин или пароль"
 }

@@ -92,3 +92,9 @@ OutlineDark.args = {
     variant: 'outline',
 };
 OutlineDark.decorators = [ThemeDecorator('dark')];
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+    children: 'Text',
+    disabled: true,
+};
