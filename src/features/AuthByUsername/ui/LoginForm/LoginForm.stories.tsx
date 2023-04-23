@@ -3,14 +3,12 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 
 import ThemeDecorator from 'shared/config/storybook/ThemeDecorator/ThemeDecorator';
 import StoreDecorator from 'shared/config/storybook/StoreDecorator/StoreDecorator';
+import { loginReducer } from 'features/AuthByUsername/model/slice/LoginSlice';
 import LoginForm from './LoginForm';
 
 export default {
     title: 'feature/LoginForm',
     component: LoginForm,
-    argTypes: {
-        backgroundColor: { control: 'color' },
-    },
 } as ComponentMeta<typeof LoginForm>;
 
 const Template: ComponentStory<typeof LoginForm> = (args) => <LoginForm {...args} />;

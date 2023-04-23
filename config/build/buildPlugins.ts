@@ -3,7 +3,7 @@ import HTMLWebpackPlugin from 'html-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
 import { BuildOptions } from './types/config';
 
-export default function buildPlugins({ paths, isDev }: BuildOptions): WebpackPluginInstance[] {
+export default function buildPlugins({ paths, isDev, apiUrl }: BuildOptions): WebpackPluginInstance[] {
     return [
         new HTMLWebpackPlugin({
             template: paths.html,
@@ -13,6 +13,7 @@ export default function buildPlugins({ paths, isDev }: BuildOptions): WebpackPlu
         }),
         new webpack.DefinePlugin({
             __IS_DEV__: JSON.stringify(isDev),
+            __API__: JSON.stringify(apiUrl),
         }),
         new webpack.HotModuleReplacementPlugin(),
     ];

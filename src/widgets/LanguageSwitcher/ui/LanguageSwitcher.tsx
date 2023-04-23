@@ -1,6 +1,7 @@
 import classNames from 'shared/helpers/classNames/classNames';
 import Button from 'shared/ui/Button';
 import { useTranslation } from 'react-i18next';
+import { memo } from 'react';
 
 interface LanguageSwitcherProps {
     className?: string;
@@ -25,4 +26,4 @@ const LanguageSwitcher = ({ className, short }: LanguageSwitcherProps) => {
     );
 };
 
-export default LanguageSwitcher;
+export default memo(LanguageSwitcher);

@@ -12,6 +12,7 @@ export interface BuildPaths {
 export interface EnvOptions {
     mode: BuildMode
     port: number
+    apiUrl: string
 }
 
 export interface BuildOptions extends EnvOptions {

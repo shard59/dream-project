@@ -1,4 +1,5 @@
 import classNames from 'shared/helpers/classNames/classNames';
+import { memo } from 'react';
 import cls from './Text.module.scss';
 
 type TextVariant = 'primary' | 'error'
@@ -25,4 +26,4 @@ const Text = (props: TextProps) => {
     );
 };
 
-export default Text;
+export default memo(Text);

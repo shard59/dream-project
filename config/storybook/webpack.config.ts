@@ -6,25 +6,26 @@ export default ({ config }: {config: webpack.Configuration}) => {
     const modifiedConfig = { ...config };
     const src = path.resolve(__dirname, '..', '..', 'src');
 
-    modifiedConfig.resolve.modules = [src, 'node_modules'];
-    modifiedConfig.resolve.extensions.push('.ts', '.tsx');
+    modifiedConfig.resolve!.modules = [src, 'node_modules'];
+    modifiedConfig.resolve!.extensions!.push('.ts', '.tsx');
 
-    modifiedConfig.module.rules = modifiedConfig.module.rules.map((rule: RuleSetRule) => {
-        if (/svg/.test(rule.test as string)) {
+    modifiedConfig.module!.rules = modifiedConfig.module!.rules!.map((rule: RuleSetRule | '...') => {
+        if (rule !== '...' && /svg/.test(rule.test as string)) {
             return { ...rule, exclude: /\.svg$/i };
         }
 
         return rule;
     });
 
-    modifiedConfig.module.rules.push({
+    modifiedConfig.module!.rules.push({
         test: /\.svg$/,
         use: ['@svgr/webpack'],
     });
-    modifiedConfig.module.rules.push(buildCssLoader(true));
+    modifiedConfig.module!.rules.push(buildCssLoader(true));
 
-    config.plugins.push(new DefinePlugin({
-        __IS_DEV__: true,
+    config.plugins!.push(new DefinePlugin({
+        __IS_DEV__: JSON.stringify(true),
+        __API__: JSON.stringify(''),
     }));
 
     return modifiedConfig;

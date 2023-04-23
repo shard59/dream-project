@@ -1,10 +1,11 @@
-import React, { useCallback, useState } from 'react';
+import React, { memo, useCallback, useState } from 'react';
 import classNames from 'shared/helpers/classNames/classNames';
 import { useTranslation } from 'react-i18next';
 import Button from 'shared/ui/Button';
 import { LoginModal } from 'features/AuthByUsername';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserAuthData, userActions } from 'entities/User';
+import useAppDispatch from 'shared/helpers/hooks/useAppDispatch';
 import cls from './Navbar.module.scss';
 
 interface NavbarProps {
@@ -16,7 +17,7 @@ const Navbar = ({ className }: NavbarProps) => {
     const [isAuthModalOpen, setAuthModalOpen] = useState(false);
 
     const autData = useSelector(getUserAuthData);
-    const dispatch = useDispatch();
+    const dispatch = useAppDispatch();
 
     const openModal = useCallback(() => {
         setAuthModalOpen(true);
@@ -53,9 +54,9 @@ const Navbar = ({ className }: NavbarProps) => {
             >
                 {t('Login')}
             </Button>
-            <LoginModal isOpen={isAuthModalOpen} onClose={closeModal} />
+            {isAuthModalOpen && <LoginModal isOpen={isAuthModalOpen} onClose={closeModal} />}
         </div>
     );
 };
 
-export default Navbar;
+export default memo(Navbar);

@@ -3,6 +3,7 @@ import { UseTheme } from 'app/providers/ThemeProvider';
 import LightIcon from 'shared/assets/icons/theme-light.svg';
 import DarkIcon from 'shared/assets/icons/theme-dark.svg';
 import Button from 'shared/ui/Button';
+import { memo } from 'react';
 
 interface ThemeSwitcherProps {
     className?: string;
@@ -22,4 +23,4 @@ const ThemeSwitcher = ({ className }: ThemeSwitcherProps) => {
     );
 };
 
-export default ThemeSwitcher;
+export default memo(ThemeSwitcher);

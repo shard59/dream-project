@@ -1,5 +1,5 @@
-import classNames from 'shared/helpers/classNames/classNames';
-import { ButtonHTMLAttributes, FC } from 'react';
+import classNames, { Mods } from 'shared/helpers/classNames/classNames';
+import { ButtonHTMLAttributes, FC, memo } from 'react';
 import cls from './Button.module.scss';
 
 type ButtonVariant =
@@ -19,7 +19,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>{
     disabled?: boolean;
 }
 
-const Button: FC<ButtonProps> = (props) => {
+const Button = (props: ButtonProps) => {
     const {
         className,
         children,
@@ -30,7 +30,7 @@ const Button: FC<ButtonProps> = (props) => {
         ...otherProps
     } = props;
 
-    const mods: Record<string, boolean > = {
+    const mods: Mods = {
         [cls.square]: square,
         [cls.disabled]: disabled,
     };
@@ -47,4 +47,4 @@ const Button: FC<ButtonProps> = (props) => {
     );
 };
 
-export default Button;
+export default memo(Button);

@@ -3,6 +3,7 @@ import MainPage from 'pages/MainPage';
 import AboutPage from 'pages/AboutPage';
 import NotFoundPage from 'pages/NotFoundPage';
 import RoutePath from 'shared/config/routePath/routePath';
+import ProfilePage from 'pages/ProfilePage';
 
 const routePath: RouteProps[] = [
     {
@@ -12,6 +13,10 @@ const routePath: RouteProps[] = [
     {
         path: RoutePath.about,
         element: <AboutPage />,
+    },
+    {
+        path: RoutePath.profile,
+        element: <ProfilePage />,
     },
     {
         path: RoutePath.not_found,
