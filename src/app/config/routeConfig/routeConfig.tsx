@@ -5,7 +5,11 @@ import NotFoundPage from 'pages/NotFoundPage';
 import RoutePath from 'shared/config/routePath/routePath';
 import ProfilePage from 'pages/ProfilePage';
 
-const routePath: RouteProps[] = [
+type AppRouteProps = RouteProps & {
+    authOnly?: boolean
+}
+
+const routePath: AppRouteProps[] = [
     {
         path: RoutePath.main,
         element: <MainPage />,
@@ -17,6 +21,7 @@ const routePath: RouteProps[] = [
     {
         path: RoutePath.profile,
         element: <ProfilePage />,
+        authOnly: true,
     },
     {
         path: RoutePath.not_found,

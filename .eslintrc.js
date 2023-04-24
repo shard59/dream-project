@@ -53,6 +53,12 @@ module.exports = {
             rules: {
                 'i18next/no-literal-string': 'off'
             }
-        }
+        },
+        {
+            files: ['*.ts', '*.tsx'],
+            rules: {
+                'no-undef': 'off',
+            },
+        },
     ]
 };

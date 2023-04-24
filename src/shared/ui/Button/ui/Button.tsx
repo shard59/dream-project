@@ -7,6 +7,7 @@ type ButtonVariant =
     'clear' |
     'clearInverted' |
     'outline' |
+    'outlineRed' |
     'background' |
     'backgroundInverted'
 type ButtonSize = 'size_m' | 'size_l' | 'size_xl'

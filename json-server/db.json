@@ -1,18 +1,26 @@
 {
   "posts": [
-    { "id": "1", "title": "json-server", "author": "typicode" }
+    {
+      "id": "1",
+      "title": "json-server",
+      "author": "typicode"
+    }
   ],
   "comments": [
-    { "id": "1", "body": "some comment", "postId": "1" }
+    {
+      "id": "1",
+      "body": "some comment",
+      "postId": "1"
+    }
   ],
   "profile": {
-    "first": "Alesha",
+    "first": "Alesha111233",
     "lastname": "Titov",
     "age": 22,
-    "currency": "RUB",
+    "currency": "EUR",
     "city": "Moscow",
-    "username":"admin",
-    "avatar": "https://pic.rutubelist.ru/user/3b/27/3b2758ad5492a76b575f7ee072e4e894.jpg"
+    "username": "admin",
+    "avatar": "https://www.pngmart.com/files/21/Account-Avatar-Profile-PNG-Photo.png"
   },
   "users": [
     {
