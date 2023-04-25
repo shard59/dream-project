@@ -3,6 +3,7 @@ import { createContext } from 'react';
 export const THEME = {
     LIGHT: 'light',
     DARK: 'dark',
+    ORANGE: 'orange',
 } as const;
 
 type ValueOf<T> = T[keyof T]
