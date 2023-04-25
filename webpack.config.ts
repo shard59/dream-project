@@ -24,6 +24,7 @@ export default (options: EnvOptions): Configuration => {
         paths,
         isDev,
         apiUrl,
+        project: 'frontend',
         port: Number(port),
     });
 };

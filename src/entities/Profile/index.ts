@@ -7,6 +7,7 @@ import getProfileIsLoading from './model/selectors/getProfileIsLoading/getProfil
 import getProfileData from './model/selectors/getProfileData/getProfileData';
 import getProfileError from './model/selectors/getProfileError/getProfileError';
 import getProfileReadonly from './model/selectors/getProfileReadonly/getProfileReadonly';
+import getProfileValidateErrors from './model/selectors/getProfileValidateErrors/getProfileValidateErrors';
 
 export {
     Profile,
@@ -20,4 +21,5 @@ export {
     getProfileError,
     getProfileIsLoading,
     getProfileReadonly,
+    getProfileValidateErrors,
 };

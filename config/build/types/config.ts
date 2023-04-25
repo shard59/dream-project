@@ -13,6 +13,7 @@ export interface EnvOptions {
     mode: BuildMode
     port: number
     apiUrl: string
+    project: 'storybook' | 'frontend' | 'jest'
 }
 
 export interface BuildOptions extends EnvOptions {

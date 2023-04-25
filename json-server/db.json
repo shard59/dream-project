@@ -20,7 +20,8 @@
     "currency": "EUR",
     "city": "Moscow",
     "username": "admin",
-    "avatar": "https://www.pngmart.com/files/21/Account-Avatar-Profile-PNG-Photo.png"
+    "avatar": "https://www.pngmart.com/files/21/Account-Avatar-Profile-PNG-Photo.png",
+    "country": "Belarus"
   },
   "users": [
     {

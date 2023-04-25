@@ -1,6 +1,6 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
-import AvatarImg from '../../../assets/images/avatar-storybook.png';
+import AvatarImg from '../../../assets/test/avatar-storybook.png';
 
 import Avatar from './Avatar';
 
