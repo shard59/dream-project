@@ -1,10 +1,12 @@
 import classNames from 'shared/helpers/classNames/classNames';
-import { CSSProperties, memo } from 'react';
+import { memo } from 'react';
 import cls from './Text.module.scss';
 
 type TextVariant = 'primary' | 'error'
 
 type TextAlign = 'left' | 'center' | 'right';
+
+type TextSize = 'size_m' | 'size_l'
 
 interface TextProps {
     className?: string;
@@ -12,6 +14,7 @@ interface TextProps {
     text?: string;
     variant?: TextVariant
     align?: TextAlign
+    size?: TextSize
 }
 
 const Text = (props: TextProps) => {
@@ -21,9 +24,15 @@ const Text = (props: TextProps) => {
         title,
         variant = 'primary',
         align = 'left',
+        size = 'size_m',
     } = props;
 
-    const additionalClassnames: (string | undefined)[] = [className, cls[variant], cls[align]];
+    const additionalClassnames: (string | undefined)[] = [
+        className,
+        cls[variant],
+        cls[align],
+        cls[size],
+    ];
 
     return (
         <div className={classNames(cls.text, {}, additionalClassnames)}>

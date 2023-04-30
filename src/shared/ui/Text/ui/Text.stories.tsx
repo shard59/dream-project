@@ -40,3 +40,10 @@ PrimaryDark.args = {
     text: 'Lorem Lorem',
 };
 PrimaryDark.decorators = [ThemeDecorator('dark')];
+
+export const SizeL = Template.bind({});
+SizeL.args = {
+    title: 'Title lorem ipsun',
+    text: 'Description Description Description Description',
+    size: 'size_l',
+};

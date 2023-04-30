@@ -3,10 +3,9 @@ import { useTranslation } from 'react-i18next';
 import Button from 'shared/ui/Button';
 import Text from 'shared/ui/Text';
 import Input from 'shared/ui/Input';
-import { useDispatch, useSelector, useStore } from 'react-redux';
-import { memo, useCallback, useEffect } from 'react';
-import { ReduxStoreWithManager } from 'app/providers/StoreProvider/config/StateSchema';
-import DynamicModuleLoader, { ReducerList } from 'shared/helpers/components/DynamicModuleLoader';
+import { useSelector } from 'react-redux';
+import { memo, useCallback } from 'react';
+import { ReducersList, DynamicModuleLoader } from 'shared/helpers/components/DynamicModuleLoader';
 import useAppDispatch from 'shared/helpers/hooks/useAppDispatch';
 import cls from './LoginForm.module.scss';
 import { loginActions, loginReducer } from '../../model/slice/LoginSlice';
@@ -21,7 +20,7 @@ interface LoginFormProps {
     onSuccess: () => void
 }
 
-const initialReducers: ReducerList = {
+const initialReducers: ReducersList = {
     loginForm: loginReducer,
 };
 

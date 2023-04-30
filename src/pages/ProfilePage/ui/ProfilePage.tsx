@@ -1,4 +1,4 @@
-import DynamicModuleLoader, { ReducerList } from 'shared/helpers/components/DynamicModuleLoader';
+import { ReducersList, DynamicModuleLoader } from 'shared/helpers/components/DynamicModuleLoader';
 import {
     fetchProfileData,
     getProfileError,
@@ -21,7 +21,7 @@ interface ProfilePageProps {
     className?: string;
 }
 
-const initialReducers: ReducerList = {
+const initialReducers: ReducersList = {
     profile: profileReducer,
 };
 
